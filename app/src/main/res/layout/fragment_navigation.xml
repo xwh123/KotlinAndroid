@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.xuwh.kotlinandroid.ui.navigation.viewmodel.NavigationViewModel" />
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</layout>

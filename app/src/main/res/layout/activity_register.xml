@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+        <variable
+            name="viewModel"
+            type="com.xuwh.kotlinandroid.ui.register.viewmodel.RegisterViewModel" />
+
+        <variable
+            name="account"
+            type="String" />
+
+        <variable
+            name="password"
+            type="String" />
+
+        <variable
+            name="repassword"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/account"
+            app:layout_constraintBottom_toTopOf="@+id/ed_account"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:text="@={account}"
+            android:id="@+id/ed_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_frame_grey_10"
+            android:drawableLeft="@mipmap/icon_account"
+            android:drawablePadding="10dp"
+            android:hint="@string/account_hint"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_password_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/password"
+            app:layout_constraintBottom_toTopOf="@+id/ed_password"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:text="@={password}"
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/shape_frame_grey_10"
+            android:drawableLeft="@mipmap/icon_password"
+            android:drawablePadding="10dp"
+            android:hint="@string/password_hint"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_re_password_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tv_re_password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/re_password"
+            app:layout_constraintBottom_toTopOf="@+id/ed_repassword"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:text="@={repassword}"
+            android:id="@+id/ed_repassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/shape_frame_grey_10"
+            android:drawableLeft="@mipmap/icon_password"
+            android:drawablePadding="10dp"
+            android:hint="@string/re_password_hint"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            app:throttleClick="@{()->viewModel.register(account,password,repassword)}"
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/shape_blue_6b_bg_25"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/tv_go_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            app:throttleClick="@{()->viewModel.goLogin()}"
+            android:id="@+id/tv_go_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="@string/go_login"
+            android:textColor="@color/blue_6b"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,71 @@
+[versions]
+agp = "8.6.0"
+kotlin = "1.9.0"
+coreKtx = "1.12.0"
+junit = "4.14-SNAPSHOT"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
+
+activityKtx = "1.8.2"
+fragmentKtx = "1.6.2"
+viewmodelKtx = "2.8.0"
+databindingRuntime = "8.3.0"
+kotlinxCoroutinesCore = "1.8.0"
+retrofit = "2.11.0"
+moshi = "1.15.2"
+moshikotlin = "1.15.2"
+converterMoshi = "2.11.0"
+hilt = "2.51"
+refresh = "3.0.0-alpha"
+glide = "4.11.0"
+arouter = "1.5.2"
+cookie = "v1.0.1"
+flexbox = "3.0.0"
+
+
+daggerHilt = "2.51.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodelKtx" }
+androidx-databinding = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "databindingRuntime" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi" }
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshikotlin" }
+moshi-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "converterMoshi" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+refresh-layout = { group = "io.github.scwang90", name = "refresh-layout-kernel", version.ref = "refresh" }
+refresh-header = { group = "io.github.scwang90", name = "refresh-header-material", version.ref = "refresh" }
+refresh-footer = { group = "io.github.scwang90", name = "refresh-footer-classics", version.ref = "refresh" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+arouter-api = { group = "com.alibaba", name = "arouter-api", version.ref = "arouter" }
+arouter-compiler = { group = "com.alibaba", name = "arouter-compiler", version.ref = "arouter" }
+cookie = { group = "com.github.franmontiel", name = "PersistentCookieJar", version.ref = "cookie" }
+flexbox = { group = "com.google.android.flexbox", name = "flexbox", version.ref = "flexbox" }
+
+
+
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+
+
